@@ -37,3 +37,12 @@ function bar() {
 }
 
 bar();
+
+var a = 1;
+// 如果在node环境，可以写成global.a
+// 或者采用通用方法，写成this.a
+window.a; // 1
+
+var b = 1;
+window.b // undefined
+;
