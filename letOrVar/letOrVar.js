@@ -16,3 +16,12 @@ for (let i = 0; i < 10; i++) {
 }
 a[6](); // 6
 //let，声明的变量仅在块级作用域内有效,不会随着循环体更改
+
+let foo = 'outer';
+
+function bar(func = x => foo) {
+  let foo = 'inner';
+  console.log(func()); // outer
+}
+
+bar();
